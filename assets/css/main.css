@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+
+/* BG Template Style */
+.bg1{
+  @apply dark:bg-neutral-900 bg-neutral-100 
+}
+
+.bg2{
+  @apply dark:bg-neutral-800 bg-neutral-200 
+}
+
+.bg3{
+  @apply dark:bg-neutral-700 bg-neutral-300 
+}
+
+.bg4{
+  @apply dark:bg-neutral-600 bg-neutral-400 
+}
+
+.bgTheme{
+  @apply bg-MPAPurple
+}
+
+/* BG Hover Template Style */
+.bgHover1{
+  @apply dark:hover:bg-neutral-900 hover:bg-neutral-100 
+}
+
+.bgHover2{
+  @apply dark:hover:bg-neutral-800 hover:bg-neutral-200 
+}
+
+.bgHover3{
+  @apply dark:hover:bg-neutral-700 hover:bg-neutral-300 
+}
+
+.bgHover4{
+  @apply dark:hover:bg-neutral-600 hover:bg-neutral-400 
+}
+
+.bgHoverTheme{
+  @apply hover:bg-MPAPurple
+}
+
+/* Text Template Style */
+.text1{
+  @apply text-neutral-900 dark:text-neutral-100 
+}
+
+.text2{
+  @apply text-neutral-800 dark:text-neutral-200 
+}
+
+.text3{
+  @apply text-neutral-700 dark:text-neutral-300 
+}
+
+.text4{
+  @apply text-neutral-600 dark:text-neutral-400 
+}
+
+.textTheme{
+  @apply text-MPAPurple
+}
+
+/* Text Hover Template Style */
+.textHover1{
+  @apply hover:text-neutral-900 dark:hover:text-neutral-100 
+}
+
+.textHover2{
+  @apply hover:text-neutral-800 dark:hover:text-neutral-200 
+}
+
+.textHover3{
+  @apply hover:text-neutral-700 dark:hover:text-neutral-300 
+}
+
+.textHover4{
+  @apply hover:text-neutral-600 dark:hover:text-neutral-400 
+}
+
+.textHoverTheme{
+  @apply hover:text-MPAPurple
+}
+
+/* Border Template Style */
+.border1{
+  @apply dark:border-neutral-900 border-neutral-100
+}
+
+.border2{
+  @apply dark:border-neutral-800 border-neutral-200
+}
+
+.border3{
+  @apply dark:border-neutral-700 border-neutral-300
+}
+
+.border3{
+  @apply dark:border-neutral-600 border-neutral-400
+}
+
+.borderTheme{
+  @apply border-MPAPurple
+}
+
+/* Divider Template Style */
+.divide1{
+  @apply dark:divide-neutral-900 divide-neutral-100
+}
+
+.divide2{
+  @apply dark:divide-neutral-800 divide-neutral-200
+}
+
+.divide3{
+  @apply dark:divide-neutral-700 divide-neutral-300
+}
+
+.divide3{
+  @apply dark:divide-neutral-600 divide-neutral-400
+}
+
+.divideTheme{
+  @apply divide-MPAPurple
+}
+
+.btn1{
+  @apply bg3 border-r-2 border-b-2 border-MPAPurple lg:border-transparent lg:hover:border-MPAPurple hover:shadow-lg duration-200 rounded-xl;
+}
+
+.btn2{
+  @apply bg3 border-r-2 border-b-2 border-MPABlue lg:border-transparent lg:hover:border-MPABlue hover:shadow-lg duration-200 rounded-xl;
+}
+
+.btnTheme{
+  @apply bg-MPAPurple p-2 rounded-xl text-neutral-100 font-semibold px-5;
+}
+
+.input1{
+  @apply bg2 rounded-lg px-2 p-1.5 focus:outline-none outline-none caret-MPAPurple;
+}
