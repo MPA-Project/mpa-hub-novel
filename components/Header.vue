@@ -16,11 +16,11 @@
         <div class="flex-1"></div>
 
         <!-- Sign in -->
-        <div>
+        <!-- <div>
           <button class="btnTheme">
             Signin
           </button>
-        </div>
+        </div> -->
         <!-- End Sign in -->
 
         <!-- Avatar -->
@@ -42,10 +42,7 @@
                   </div>
                   <div class="py-1">
                     <MenuItem v-slot="{ active }">
-                      <a href="#" :class="[active ? 'bg-gray-100 text-gray-900' : '', 'block px-4 py-2 text-sm']">Account Settings</a>
-                    </MenuItem>
-                    <MenuItem v-slot="{ active }">
-                      <a href="#" :class="[active ? 'bg-gray-100 text-gray-900' : '', 'block px-4 py-2 text-sm']">Group Settings</a>
+                      <a href="https://mpa-hub-nuxt.vercel.app/user/me" :class="[active ? 'bg-gray-100 text-gray-900' : '', 'block px-4 py-2 text-sm']">Account Settings</a>
                     </MenuItem>
                   </div>
                   <div class="py-1">
