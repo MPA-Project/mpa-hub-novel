@@ -13,28 +13,61 @@
           </a>
         </div>
 
-        <!-- Dark Mode Toggle Button -->
-        <button @click="changeMode()" class="bg-neutral-700 dark:bg-neutral-100 p-1.5 px-5 rounded-full transition-all" >
-          
-          <!-- Sun SVG -->
-          <svg v-show="mode == 'dark'" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-700 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-          <!-- End Sun SVG -->
+        <div class="flex-1"></div>
 
-          <!-- Moon SVG -->
-          <svg v-show="mode == 'light'" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neutral-100 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-          <!-- End Moon SVG -->
+        <!-- Sign in -->
+        <div>
+          <button class="btnTheme">
+            Signin
+          </button>
+        </div>
+        <!-- End Sign in -->
 
-        </button>
-        <!-- End Dark Mode Toggle Button -->
+        <!-- Avatar -->
+        <div>
+          <div class="flex items-center">
+            <Menu as="div" class="relative inline-block">
 
-        <!-- <button @click="store.toggleLoadingState()" class="bg-MPAPurple p-2 rounded-xl text-neutral-100">
-          <span v-if="store.$state.loadingState">Data State</span>
-          <span v-else>Loading State</span>
-        </button> -->
+              <div>
+                <MenuButton class="inline-flex justify-center w-10 h-10 rounded-full text-sm font-medium">
+                  <img class="w-full h-full rounded-full" src="/images/default_avatar.png" alt="Avatar" />
+                </MenuButton>
+              </div>
+
+              <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
+                <MenuItems class="origin-top-right absolute right-0 mt-2 w-56 cardAvatar rounded-md shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
+                  <div class="py-3 px-4">
+                    <span class="block text-sm text-gray-900 dark:text-white">#USERNAME#</span>
+                    <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">#GROUP#</span>
+                  </div>
+                  <div class="py-1">
+                    <MenuItem v-slot="{ active }">
+                      <a href="#" :class="[active ? 'bg-gray-100 text-gray-900' : '', 'block px-4 py-2 text-sm']">Account Settings</a>
+                    </MenuItem>
+                    <MenuItem v-slot="{ active }">
+                      <a href="#" :class="[active ? 'bg-gray-100 text-gray-900' : '', 'block px-4 py-2 text-sm']">Group Settings</a>
+                    </MenuItem>
+                  </div>
+                  <div class="py-1">
+                    <MenuItem v-slot="{ active }">
+                      <a href="#" :class="[active ? 'bg-gray-100 text-gray-900' : '', 'block px-4 py-2 text-sm']">Language</a>
+                    </MenuItem>
+                    <MenuItem v-slot="{ active }">
+                      <a href="#" :class="[active ? 'bg-gray-100 text-gray-900' : '', 'block px-4 py-2 text-sm']">Theme</a>
+                    </MenuItem>
+                  </div>
+                  <div class="py-1">
+                    <MenuItem v-slot="{ active }">
+                      <a href="#" :class="[active ? 'bg-gray-100 text-gray-900' : '', 'block px-4 py-2 text-sm']">Sign out</a>
+                    </MenuItem>
+                  </div>
+                </MenuItems>
+              </transition>
+
+            </Menu>
+          </div>
+        </div>
+        <!-- End Avatar -->
 
       </div>
       <!-- End Navbar -->
@@ -44,6 +77,7 @@
 </template>
 <script setup>
   import {useStores} from '@/store/Store'
+  import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 
   const store = useStores()
   const transparantNav = ref(true)

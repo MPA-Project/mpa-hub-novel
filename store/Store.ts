@@ -5,11 +5,16 @@ export const useStores = defineStore('store', {
   state: () => {
     return {
       loadingState: true,
+      isLogged: false,
     }
   },
   actions:{
     toggleLoadingState(){
       this.loadingState = !this.loadingState
+    },
+
+    setLoginState(state: boolean) {
+      this.isLogged = state
     },
   },
 

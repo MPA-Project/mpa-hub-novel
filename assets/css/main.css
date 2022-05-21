@@ -151,6 +151,10 @@ body {
   @apply bg-MPAPurple p-2 rounded-xl text-neutral-100 font-semibold px-5;
 }
 
+.cardAvatar {
+  @apply bg3 text2;
+}
+
 .input1{
   @apply bg2 rounded-lg px-2 p-1.5 focus:outline-none outline-none caret-MPAPurple;
 }
