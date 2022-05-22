@@ -16,15 +16,15 @@
         <div class="flex-1"></div>
 
         <!-- Sign in -->
-        <!-- <div>
+        <div v-if="!store.$state.isLogged">
           <button class="btnTheme">
             Signin
           </button>
-        </div> -->
+        </div>
         <!-- End Sign in -->
 
         <!-- Avatar -->
-        <div>
+        <div v-if="store.$state.isLogged">
           <div class="flex items-center">
             <Menu as="div" class="relative inline-block">
 
