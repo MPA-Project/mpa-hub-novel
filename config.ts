@@ -4,6 +4,9 @@ export const Config = {
   URL: {
     AUTH: {
       REFRESH_TOKEN: 'oauth/refresh-token',
+    },
+    USER: {
+      ME: 'v1/user/me'
     }
   },
   COOKIE: {
